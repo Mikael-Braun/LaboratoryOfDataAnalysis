@@ -1,0 +1,59 @@
+variavel,tipo,dtype,n_unicos,n_nulos
+user_id,Quant. Discreta,int64,300000,0
+app_name,Qual. Nominal,object,1,0
+age,Quant. Contínua,int64,53,0
+gender,Qual. Nominal,object,4,0
+country,Qual. Nominal,object,10,0
+urban_rural,Qual. Nominal,object,3,0
+income_level,Qual. Ordinal,object,5,0
+employment_status,Qual. Nominal,object,6,0
+education_level,Qual. Ordinal,object,6,0
+relationship_status,Qual. Nominal,object,5,0
+has_children,Booleana,object,2,0
+exercise_hours_per_week,Quant. Contínua,float64,237,0
+sleep_hours_per_night,Quant. Contínua,float64,71,0
+diet_quality,Qual. Ordinal,object,5,0
+smoking,Booleana,object,3,0
+alcohol_frequency,Qual. Ordinal,object,5,0
+perceived_stress_score,Quant. Contínua,int64,41,0
+self_reported_happiness,Quant. Discreta,int64,10,0
+body_mass_index,Quant. Contínua,float64,267,0
+blood_pressure_systolic,Quant. Contínua,int64,70,0
+blood_pressure_diastolic,Quant. Contínua,int64,40,0
+daily_steps_count,Quant. Contínua,int64,698,0
+weekly_work_hours,Quant. Contínua,float64,770,0
+hobbies_count,Quant. Discreta,int64,11,0
+social_events_per_month,Quant. Discreta,int64,16,0
+books_read_per_year,Quant. Discreta,int64,28,0
+volunteer_hours_per_month,Quant. Contínua,float64,160,0
+travel_frequency_per_year,Quant. Discreta,int64,16,0
+daily_active_minutes_instagram,Quant. Contínua,float64,538,0
+sessions_per_day,Quant. Discreta,int64,50,0
+posts_created_per_week,Quant. Discreta,int64,28,0
+reels_watched_per_day,Quant. Contínua,int64,280,0
+stories_viewed_per_day,Quant. Contínua,int64,138,0
+likes_given_per_day,Quant. Contínua,int64,308,0
+comments_written_per_day,Quant. Discreta,int64,81,0
+dms_sent_per_week,Quant. Discreta,int64,82,0
+dms_received_per_week,Quant. Discreta,int64,90,0
+ads_viewed_per_day,Quant. Discreta,int64,51,0
+ads_clicked_per_day,Quant. Discreta,int64,21,0
+time_on_feed_per_day,Quant. Contínua,int64,308,0
+time_on_explore_per_day,Quant. Contínua,int64,154,0
+time_on_messages_per_day,Quant. Contínua,int64,128,0
+time_on_reels_per_day,Quant. Contínua,int64,207,0
+followers_count,Quant. Contínua,int64,15497,0
+following_count,Quant. Contínua,int64,9919,0
+uses_premium_features,Booleana,object,2,0
+notification_response_rate,Quant. Contínua,float64,101,0
+account_creation_year,Quant. Discreta,int64,16,0
+last_login_date,Qual. Nominal,object,369,0
+average_session_length_minutes,Quant. Contínua,float64,342,0
+content_type_preference,Qual. Nominal,object,6,0
+preferred_content_theme,Qual. Nominal,object,8,0
+privacy_setting_level,Qual. Ordinal,object,3,0
+two_factor_auth_enabled,Booleana,object,2,0
+biometric_login_used,Booleana,object,2,0
+linked_accounts_count,Quant. Discreta,int64,6,0
+subscription_status,Qual. Nominal,object,3,0
+user_engagement_score,Quant. Contínua,float64,685,0
