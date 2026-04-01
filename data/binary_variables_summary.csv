@@ -1,0 +1,5 @@
+Variável,True (%),False (%)
+has_children,100.0,0.0
+uses_premium_features,100.0,0.0
+two_factor_auth_enabled,100.0,0.0
+biometric_login_used,100.0,0.0
