@@ -1,0 +1,5 @@
+Hipótese,Descrição,t/rho,p-value,Conclusão
+H1,Alto stress → mais Instagram,577.7333,0.0,Rejeita H₀
+H2,Mais exercício → mais felicidade,-3.5545,0.000379,Rejeita H₀
+H3,Mais sono → mais felicidade,0.0021,0.240484,Não rejeita H₀
+H4,Mais Reels → mais stress,0.6748,0.0,Rejeita H₀

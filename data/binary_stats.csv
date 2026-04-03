@@ -1,0 +1,12 @@
+variavel,categoria,frequencia,percentagem
+has_children,No,216329,72.11
+has_children,Yes,83671,27.89
+smoking,No,224957,74.99
+smoking,Yes,45107,15.04
+smoking,Former,29936,9.98
+two_factor_auth_enabled,Yes,195089,65.03
+two_factor_auth_enabled,No,104911,34.97
+biometric_login_used,No,179782,59.93
+biometric_login_used,Yes,120218,40.07
+uses_premium_features,No,233630,77.88
+uses_premium_features,Yes,66370,22.12

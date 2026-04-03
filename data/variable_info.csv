@@ -1,20 +1,20 @@
 variavel,tipo,dtype,n_unicos,n_nulos
 user_id,Quant. Discreta,int64,300000,0
-app_name,Qual. Nominal,object,1,0
+app_name,Qual. Nominal,str,1,0
 age,Quant. Contínua,int64,53,0
-gender,Qual. Nominal,object,4,0
-country,Qual. Nominal,object,10,0
-urban_rural,Qual. Nominal,object,3,0
-income_level,Qual. Ordinal,object,5,0
-employment_status,Qual. Nominal,object,6,0
-education_level,Qual. Ordinal,object,6,0
-relationship_status,Qual. Nominal,object,5,0
-has_children,Booleana,object,2,0
+gender,Qual. Nominal,str,4,0
+country,Qual. Nominal,str,10,0
+urban_rural,Qual. Nominal,str,3,0
+income_level,Qual. Ordinal,str,5,0
+employment_status,Qual. Nominal,str,6,0
+education_level,Qual. Ordinal,str,6,0
+relationship_status,Qual. Nominal,str,5,0
+has_children,Booleana,str,2,0
 exercise_hours_per_week,Quant. Contínua,float64,237,0
 sleep_hours_per_night,Quant. Contínua,float64,71,0
-diet_quality,Qual. Ordinal,object,5,0
-smoking,Booleana,object,3,0
-alcohol_frequency,Qual. Ordinal,object,5,0
+diet_quality,Qual. Ordinal,str,5,0
+smoking,Booleana,str,3,0
+alcohol_frequency,Qual. Ordinal,str,5,0
 perceived_stress_score,Quant. Contínua,int64,41,0
 self_reported_happiness,Quant. Discreta,int64,10,0
 body_mass_index,Quant. Contínua,float64,267,0
@@ -44,16 +44,16 @@ time_on_messages_per_day,Quant. Contínua,int64,128,0
 time_on_reels_per_day,Quant. Contínua,int64,207,0
 followers_count,Quant. Contínua,int64,15497,0
 following_count,Quant. Contínua,int64,9919,0
-uses_premium_features,Booleana,object,2,0
+uses_premium_features,Booleana,str,2,0
 notification_response_rate,Quant. Contínua,float64,101,0
 account_creation_year,Quant. Discreta,int64,16,0
-last_login_date,Qual. Nominal,object,369,0
+last_login_date,Qual. Nominal,str,369,0
 average_session_length_minutes,Quant. Contínua,float64,342,0
-content_type_preference,Qual. Nominal,object,6,0
-preferred_content_theme,Qual. Nominal,object,8,0
-privacy_setting_level,Qual. Ordinal,object,3,0
-two_factor_auth_enabled,Booleana,object,2,0
-biometric_login_used,Booleana,object,2,0
+content_type_preference,Qual. Nominal,str,6,0
+preferred_content_theme,Qual. Nominal,str,8,0
+privacy_setting_level,Qual. Ordinal,str,3,0
+two_factor_auth_enabled,Booleana,str,2,0
+biometric_login_used,Booleana,str,2,0
 linked_accounts_count,Quant. Discreta,int64,6,0
-subscription_status,Qual. Nominal,object,3,0
+subscription_status,Qual. Nominal,str,3,0
 user_engagement_score,Quant. Contínua,float64,685,0
