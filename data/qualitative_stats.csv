@@ -1,0 +1,82 @@
+variavel,categoria,frequencia,percentagem
+gender,Female,144125,48.04
+gender,Male,143873,47.96
+gender,Non-binary,8966,2.99
+gender,Prefer not to say,3036,1.01
+country,United States,74886,24.96
+country,India,54260,18.09
+country,Brazil,35848,11.95
+country,Other,30011,10.0
+country,United Kingdom,23872,7.96
+country,Canada,20845,6.95
+country,Australia,18049,6.02
+country,South Korea,15111,5.04
+country,Germany,14989,5.0
+country,Japan,12129,4.04
+urban_rural,Urban,165042,55.01
+urban_rural,Suburban,90130,30.04
+urban_rural,Rural,44828,14.94
+employment_status,Full-time employed,135158,45.05
+employment_status,Student,65580,21.86
+employment_status,Freelancer,36181,12.06
+employment_status,Unemployed,30096,10.03
+employment_status,Part-time,24035,8.01
+employment_status,Retired,8950,2.98
+relationship_status,Single,120159,40.05
+relationship_status,In a relationship,75009,25.0
+relationship_status,Married,75002,25.0
+relationship_status,Divorced,23849,7.95
+relationship_status,Widowed,5981,1.99
+content_type_preference,Reels,50239,16.75
+content_type_preference,Stories,50207,16.74
+content_type_preference,Mixed,50140,16.71
+content_type_preference,Photos,50012,16.67
+content_type_preference,Live,49743,16.58
+content_type_preference,Videos,49659,16.55
+preferred_content_theme,Other,37720,12.57
+preferred_content_theme,Fashion,37703,12.57
+preferred_content_theme,Music,37622,12.54
+preferred_content_theme,Fitness,37511,12.5
+preferred_content_theme,Art,37471,12.49
+preferred_content_theme,Travel,37352,12.45
+preferred_content_theme,Food,37326,12.44
+preferred_content_theme,Tech,37295,12.43
+subscription_status,Free,224924,74.97
+subscription_status,Premium,45125,15.04
+subscription_status,Business,29951,9.98
+app_name,Instagram,300000,100.0
+income_level,Middle,90403,30.13
+income_level,Lower-middle,74728,24.91
+income_level,Low,60152,20.05
+income_level,Upper-middle,45120,15.04
+income_level,High,29597,9.87
+education_level,Bachelor’s,105349,35.12
+education_level,High school,74642,24.88
+education_level,Some college,60120,20.04
+education_level,Master’s,35943,11.98
+education_level,Other,14944,4.98
+education_level,PhD,9002,3.0
+diet_quality,Average,104967,34.99
+diet_quality,Good,75005,25.0
+diet_quality,Poor,59663,19.89
+diet_quality,Excellent,30318,10.11
+diet_quality,Very poor,30047,10.02
+alcohol_frequency,Rarely,105206,35.07
+alcohol_frequency,Never,89544,29.85
+alcohol_frequency,Weekly,59854,19.95
+alcohol_frequency,Several times a week,30184,10.06
+alcohol_frequency,Daily,15212,5.07
+privacy_setting_level,Friends only,100188,33.4
+privacy_setting_level,Private,100094,33.36
+privacy_setting_level,Public,99718,33.24
+has_children,No,216329,72.11
+has_children,Yes,83671,27.89
+smoking,No,224957,74.99
+smoking,Yes,45107,15.04
+smoking,Former,29936,9.98
+two_factor_auth_enabled,Yes,195089,65.03
+two_factor_auth_enabled,No,104911,34.97
+biometric_login_used,No,179782,59.93
+biometric_login_used,Yes,120218,40.07
+uses_premium_features,No,233630,77.88
+uses_premium_features,Yes,66370,22.12
