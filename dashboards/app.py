@@ -1,136 +1,202 @@
-# ============================================================
-# APP.PY — Entrada principal do Dashboard
-# ============================================================
 import streamlit as st
 
 st.set_page_config(
-    page_title='📱 Instagram & Bem-Estar',
+    page_title='Instagram & Bem-Estar',
     page_icon='📱',
     layout='wide',
-    initial_sidebar_state='expanded'
+    initial_sidebar_state='collapsed'
 )
 
-# CSS global (NOVA PALETA)
 st.markdown("""
 <style>
-    .main { background-color: #0a0a0f; }
-
-    [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #111118 0%, #0a0a0f 100%);
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    * { font-family: 'Space Grotesk', sans-serif; }
+    .stApp { background-color: #050508; }
+    [data-testid="stSidebar"] { background: #080810; border-right: 1px solid #00ff8822; }
+    .block-container { padding-top: 2rem; max-width: 1200px; }
+    div[data-testid="stMetric"] {
+        background: #0a0a14;
+        border: 1px solid #00ff8833;
+        border-radius: 12px;
+        padding: 16px;
     }
-
-    .stMetric {
-        background: linear-gradient(135deg, #111118, #1c1c28);
-        border-radius: 10px;
-        padding: 10px;
-        border-left: 3px solid #c850c0;
-    }
-
     div[data-testid="stMetricValue"] {
-        color: #f0f0f5;
-        font-size: 1.4em;
+        font-size: 1.8em !important;
+        font-weight: 700 !important;
+        color: #00ff88 !important;
     }
-
     div[data-testid="stMetricLabel"] {
-        color: #8888aa;
+        color: #444466 !important;
+        font-size: 0.8em !important;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
     }
+    h1, h2, h3 { color: #ffffff !important; }
+    [data-testid="stSidebarNav"] { display: none; }
 
-    hr {
-        border-color: #2a2a3e;
+    /* Page link buttons */
+    [data-testid="stPageLink"] {
+        background: transparent !important;
+        border: 1px solid #00ff8844 !important;
+        border-radius: 8px !important;
+        color: #00ff88 !important;
+        width: 100% !important;
+        margin-top: 0.5rem !important;
+        font-size: 0.68em !important;
+        font-weight: 600 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    [data-testid="stPageLink"] p,
+    [data-testid="stPageLink"] span {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        font-size: 1em !important;
+        letter-spacing: 0.03em !important;
+    }
+    [data-testid="stPageLink"]:hover {
+        background: #00ff8811 !important;
+        border-color: #00ff88 !important;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# ── Página inicial ───────────────────────────────────────────
-st.markdown("""
-<h1 style='text-align:center;
-background: linear-gradient(135deg, #4158d0, #c850c0, #ffcc02);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-size: 3em;
-font-weight: bold;'>
-📱 Instagram & Bem-Estar
-</h1>
+# ── Hero ──────────────────────────────────────────────────────
+st.html("""
+<div style='padding: 4rem 0 2rem 0;'>
+    <p style='
+        color: #00ff88;
+        font-size: 0.85em;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin: 0;
+        font-weight: 600;
+    '>Laboratório de Análise de Dados · 2025/26</p>
 
-<h3 style='text-align:center; color: #8888aa;'>
-O Custo Psicológico das Redes Sociais
-</h3>
+    <h1 style='
+        font-size: 4em;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0.2rem 0;
+        line-height: 1;
+        letter-spacing: -0.02em;
+    '>Instagram<br><span style="color: #00ff88;">& Bem-Estar</span></h1>
 
-<hr>
-""", unsafe_allow_html=True)
+    <p style='color: #333355; font-size: 1em; margin: 0.8rem 0 0 0;'>
+        O Custo Psicológico das Redes Sociais · 300.000 utilizadores sintéticos
+    </p>
+    <div style='
+        margin-top: 2rem;
+        height: 1px;
+        background: linear-gradient(90deg, #00ff88, transparent);
+        width: 200px;
+    '></div>
+</div>
+""")
 
-st.markdown("""
-<p style='text-align:center; color: #f0f0f5; font-size: 1.1em;'>
-Laboratório de Análise de Dados — 2025/26
-</p>
-""", unsafe_allow_html=True)
+# ── Stats strip ───────────────────────────────────────────────
+c1, c2, c3, c4 = st.columns(4)
+c1.metric('Utilizadores', '300.000')
+c2.metric('Variáveis', '58')
+c3.metric('Dashboards', '4')
+c4.metric('Novas Features', '8')
 
-# ── Cards de navegação ───────────────────────────────────────
-st.markdown('## 🗺️ Escolhe o teu Dashboard')
-st.markdown('<span style="color:#8888aa">Cada dashboard foi desenhado para um público específico.</span>', unsafe_allow_html=True)
-st.divider()
+st.html("<br>")
+st.html("""
+<p style='
+    color: #333355;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+'>— Seleciona um dashboard</p>
+""")
 
-col1, col2 = st.columns(2)
+# ── Dashboard cards + navegação ───────────────────────────────
+dashboards = [
+    {
+        'emoji': '🔬',
+        'titulo': 'Investigador',
+        'cor': '#00ff88',
+        'historia': '"Os dados revelam o que o olho não vê"',
+        'desc': 'Correlações, distribuições, estatísticas avançadas e explorador de variáveis.',
+        'page': 'pages/1_investigador.py',
+        'label': 'Investigador →',
+    },
+    {
+        'emoji': '🧑‍⚕️',
+        'titulo': 'Profissional de Saúde',
+        'cor': '#ff6bff',
+        'historia': '"Quem são os utilizadores em risco?"',
+        'desc': 'Indicadores clínicos, grupos vulneráveis e notas de interpretação.',
+        'page': 'pages/2_saude.py',
+        'label': 'Saúde →',
+    },
+    {
+        'emoji': '📱',
+        'titulo': 'Utilizador Comum',
+        'cor': '#ffdd00',
+        'historia': '"Como te comparas com o mundo?"',
+        'desc': 'Define o teu perfil, descobre a tua persona e recebe recomendações.',
+        'page': 'pages/3_utilizador.py',
+        'label': 'Utilizador →',
+    },
+    {
+        'emoji': '📊',
+        'titulo': 'Gestor de Marketing',
+        'cor': '#00ddff',
+        'historia': '"Onde está a atenção?"',
+        'desc': 'Personas, engagement, conteúdo preferido e comportamento por mercado.',
+        'page': 'pages/4_marketing.py',
+        'label': 'Marketing →',
+    },
+]
 
-with col1:
-    st.markdown("""
-    <a href="javascript:window.location.pathname='/investigador'" style="text-decoration: none; color: inherit;">
-    <div style='background: linear-gradient(135deg, #111118, #1c1c28);
-    border-radius: 15px; padding: 20px; border-left: 4px solid #c850c0;
-    height: 200px;'>
-    <h3 style='color: #c850c0;'>🔬 Investigador</h3>
-    <p style='color: #f0f0f5;'>Análise técnica completa com correlações,
-    distribuições e estatísticas avançadas. Filtros dinâmicos e exploração livre.</p>
-    </div>
-    </a>
-    """, unsafe_allow_html=True)
+cols = st.columns(4)
+for col, d in zip(cols, dashboards):
+    with col:
+        st.html(f"""
+        <div style='
+            background: #080810;
+            border: 1px solid {d["cor"]}22;
+            border-bottom: 2px solid {d["cor"]};
+            border-radius: 12px;
+            padding: 1.5rem 1rem;
+            height: 300px;
+        '>
+            <div style='
+                font-size: 1.8em;
+                margin-bottom: 0.8rem;
+                filter: drop-shadow(0 0 8px {d["cor"]});
+            '>{d["emoji"]}</div>
+            <p style='
+                color: {d["cor"]};
+                font-size: 0.75em;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-weight: 700;
+                margin: 0 0 0.3rem 0;
+            '>{d["titulo"]}</p>
+            <p style='
+                color: #ffffff;
+                font-size: 0.8em;
+                font-style: italic;
+                margin: 0 0 0.4rem 0;
+                font-weight: 300;
+            '>{d["historia"]}</p>
+            <p style='color: #333355; font-size: 0.75em; margin: 0; line-height: 1.4;'>
+                {d["desc"]}
+            </p>
+        </div>
+        """)
+        st.page_link(d['page'], label=d['label'], use_container_width=True)
 
-with col2:
-    st.markdown("""
-    <a href="javascript:window.location.pathname='/saude'" style="text-decoration: none; color: inherit;">
-    <div style='background: linear-gradient(135deg, #111118, #1c1c28);
-    border-radius: 15px; padding: 20px; border-left: 4px solid #ffcc02;
-    height: 200px;'>
-    <h3 style='color: #ffcc02;'>🧑‍⚕️ Profissional de Saúde</h3>
-    <p style='color: #f0f0f5;'>Indicadores de risco, grupos vulneráveis e
-    relação entre uso do Instagram e saúde mental.</p>
-    </div>
-    </a>
-    """, unsafe_allow_html=True)
-
-col3, col4 = st.columns(2)
-
-with col3:
-    st.markdown("""
-    <a href="javascript:window.location.pathname='/utilizador'" style="text-decoration: none; color: inherit;">
-    <div style='background: linear-gradient(135deg, #111118, #1c1c28);
-    border-radius: 15px; padding: 20px; border-left: 4px solid #4158d0;
-    height: 200px;'>
-    <h3 style='color: #4158d0;'>📱 Utilizador Comum</h3>
-    <p style='color: #f0f0f5;'>Define o teu perfil e compara-te com a média.
-    Descobre a tua persona e nível de dependência digital.</p>
-    </div>
-    </a>
-    """, unsafe_allow_html=True)
-
-with col4:
-    st.markdown("""
-    <a href="javascript:window.location.pathname='/marketing'" style="text-decoration: none; color: inherit;">
-    <div style='background: linear-gradient(135deg, #111118, #1c1c28);
-    border-radius: 15px; padding: 20px; border-left: 4px solid #c850c0;
-    height: 200px;'>
-    <h3 style='color: #c850c0;'>📊 Gestor de Marketing</h3>
-    <p style='color: #f0f0f5;'>Personas, engagement, conteúdo preferido
-    e comportamento por país. Insights para estratégia digital.</p>
-    </div>
-    </a>
-    """, unsafe_allow_html=True)
-
-st.divider()
-
-st.markdown("""
-<p style='text-align:center; color: #8888aa; font-size: 0.9em;'>
-📊 Dataset: Social Media User Behavior & Lifestyle — 273.788 utilizadores sintéticos
-| Kaggle CC0 Public Domain
-</p>
-""", unsafe_allow_html=True)
+st.html("""
+<div style='margin-top: 4rem; padding-top: 1rem; border-top: 1px solid #0a0a14;'>
+    <p style='color: #1a1a2e; font-size: 0.8em; text-align: center;'>
+        Dataset: Social Media User Behavior & Lifestyle · Kaggle CC0 · LAD 2025/26
+    </p>
+</div>
+""")
