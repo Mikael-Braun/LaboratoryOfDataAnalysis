@@ -117,13 +117,13 @@ st.html("""
 # ── Dashboard cards + navegação ───────────────────────────────
 dashboards = [
     {
-        'emoji': '🔬',
-        'titulo': 'Investigador',
-        'cor': '#00ff88',
-        'historia': '"Os dados revelam o que o olho não vê"',
-        'desc': 'Correlações, distribuições, estatísticas avançadas e explorador de variáveis.',
-        'page': 'pages/1_investigador.py',
-        'label': 'Investigador →',
+        'emoji': '📱',
+        'titulo': 'Utilizador Comum',
+        'cor': '#ffdd00',
+        'historia': '"Como te comparas com o mundo?"',
+        'desc': 'Define o teu perfil, descobre a tua persona e recebe recomendações.',
+        'page': 'pages/1_utilizador.py',
+        'label': 'Utilizador →',
     },
     {
         'emoji': '🧑‍⚕️',
@@ -135,13 +135,13 @@ dashboards = [
         'label': 'Saúde →',
     },
     {
-        'emoji': '📱',
-        'titulo': 'Utilizador Comum',
-        'cor': '#ffdd00',
-        'historia': '"Como te comparas com o mundo?"',
-        'desc': 'Define o teu perfil, descobre a tua persona e recebe recomendações.',
-        'page': 'pages/3_utilizador.py',
-        'label': 'Utilizador →',
+        'emoji': '🔬',
+        'titulo': 'Investigador',
+        'cor': '#00ff88',
+        'historia': '"Os dados revelam o que o olho não vê"',
+        'desc': 'Correlações, distribuições, estatísticas avançadas e explorador de variáveis.',
+        'page': 'pages/3_investigador.py',
+        'label': 'Investigador →',
     },
     {
         'emoji': '📊',
