@@ -171,7 +171,9 @@ with tab4:
     with col2: y_var = st.selectbox('Eixo Y:', num_vars, index=num_vars.index('wellbeing_index') if 'wellbeing_index' in num_vars else 1)
     with col3: color_var = st.selectbox('Cor:', cat_vars)
     with col4: chart_type = st.selectbox('Tipo:', chart_types)
-    with col5: sample_n = st.slider('Amostra:', 500, min(10_000, len(df)), 3000, step=500)
+    max_sample = min(sample, len(df))
+    min_sample = min(3000, max_sample)
+    with col5: sample_n = st.slider('Amostra:', min_sample, max_sample, min_sample, step=500)
 
     s = df.sample(n=min(sample_n, len(df)), random_state=42)
 
