@@ -1,0 +1,33 @@
+{
+  "FEATURES": [
+    "daily_active_minutes_instagram",
+    "sessions_per_day",
+    "reels_watched_per_day",
+    "stories_viewed_per_day",
+    "time_on_feed_per_day",
+    "time_on_reels_per_day",
+    "posts_created_per_week",
+    "likes_given_per_day",
+    "average_session_length_minutes",
+    "user_engagement_score",
+    "sleep_hours_per_night",
+    "exercise_hours_per_week",
+    "daily_steps_count",
+    "body_mass_index",
+    "digital_addiction_score",
+    "wellbeing_index",
+    "doom_scroll_ratio",
+    "follower_ratio",
+    "age"
+  ],
+  "TARGET_REG": "perceived_stress_score",
+  "TARGET_CLF": "user_persona",
+  "SAMPLES": {
+    "FULL": 50000,
+    "SVM": 10000,
+    "KNN": 20000,
+    "HIER": 2000,
+    "CV": 30000,
+    "NN": 30000
+  }
+}
